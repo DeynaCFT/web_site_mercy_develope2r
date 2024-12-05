@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubícanos - Mercy Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; 
+            color: #333; 
+        }
+
+        header {
+            background-color: #333; 
+            padding: 20px;
+        }
+
+        header .logo {
+            max-width: 150px; 
+            display: block;
+            margin: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center; 
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px; 
+        }
+
+        nav ul li a {
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #bbb; 
+        }
+
+        main {
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 20px;
+            background-color: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #444; 
+        }
+
+        .mapa {
+            margin: 20px 0; 
+        }
+
+        form {
+            display: flex;
+            flex-direction: column; 
+        }
+
+        form input, form textarea {
+            margin: 10px 0; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #333; 
+            color: #fff; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 16px; 
+        }
+
+        form button:hover {
+            background-color: #555; 
+        }
+
+        footer {
+            background-color: #333; 
+            color: #fff; 
+            text-align: center; 
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .logo {
+            max-width: 50px; 
+        }
+
+    </style>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="Assets/img/logo.png" alt="Logotipo de Mercy Developer" class="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ubicacion.html">Ubícanos</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Ubícanos</h1>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509563!2d144.9537353153177!3d-37.816279979751106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f1e8f67%3A0x5045675218ceed30!2sMelbourne%20CBD%2C%20Victoria%2C%20Australia!5e0!3m2!1ses!2ses!4v1618995928378!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <h2>Contacto</h2>
+        <form id="formulario-ubicacion" onsubmit="enviarFormulario(event)">
+            <input type="text" placeholder="Nombre" required>
+            <input type="text" placeholder="Apellido" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="tel" placeholder="Teléfono" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensaje-ubicacion"></p>
+    </main>
+
+    <footer>
+        <p><img src="Assets/img/logo.png" alt="Logotipo" class="logo"> Mercy Developer | Teléfono: +56 9 8843 5438</p>
+    </footer>
+
+    <script>
+        function enviarFormulario(event) {
+            event.preventDefault();
+            const nombre = event.target[0].value;
+            const apellido = event.target[1].value;
+            console.log(`Nombre: ${nombre}, Apellido: ${apellido}`);
+            document.getElementById("mensaje-ubicacion").innerHTML = `Hola <strong>${nombre} ${apellido}</strong>, su mensaje ha sido enviado correctamente.`;
+            document.getElementById("mensaje-ubicacion").style.color = "blue";
+        }
+    </script>
+</body>
+</html>

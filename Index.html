@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercy Developer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; 
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333; 
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            max-width: 1200px; 
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 60px; 
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .titulo {
+            color: #fff; 
+            font-size: 40px;
+        }
+
+        ul {
+            list-style: none; 
+            padding: 0;
+            margin: 0;
+            display: flex; 
+        }
+
+        li {
+            margin-left: 20px; 
+        }
+
+        a {
+            text-decoration: none; 
+            color: #fff; 
+            font-size: 18px; 
+            transition: color 0.3s; 
+        }
+
+        a:hover {
+            color: #ddd; 
+        }
+
+        .portada {
+            margin: 80px 0;
+            text-align: center;
+        }
+
+
+        .especialidades {
+            background-color: #fff; 
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333; 
+            margin-bottom: 20px; 
+        }
+
+        .card-group {
+            display: flex;
+            justify-content: center; 
+            gap: 20px; 
+        }
+
+        .card {
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s; 
+            max-width: 300px; 
+        }
+
+        .card:hover {
+            transform: translateY(-5px); 
+        }
+
+        .card-title {
+            color: #333; 
+        }
+
+        .card-text {
+            color: #666; 
+        }
+
+        footer {
+            background-color: #333; 
+            color: #fff; 
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="Assets/img/logo.png" alt="Logotipo de Mercy Developer" class="logo">
+                <span class="titulo">Mercy Developer</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ubicacion.html">Ubícanos</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="portada">
+                    <div class="carousel-item active">
+                        <img src="Assets/img/portada1.png" class="d-block w-100" alt="portada1">
+                    </div>
+                    </div>
+                </button>
+            </div>
+        </section>
+        
+        <section class="especialidades">
+            <h1>Servicios que Ofrecemos</h1>
+            <div class="card-group">
+                <div class="card">
+                    <img src="Assets/img/sistemas.png" style="max-width: 18rem;" class="card-img-top" alt="Instalación de Sistemas Operativos">
+                    <div class="card-body">
+                        <h5 class="card-title">Instalación de Sistemas Operativos</h5>
+                        <p class="card-text">Ofrecemos servicios especializados de instalación, configuración y optimización de sistemas operativos para computadoras y dispositivos. Trabajamos con sistemas como Windows, macOS y Linux, y ajustamos cada instalación a las necesidades del cliente, ya sea para uso personal, educativo o empresarial. Además, brindamos asesoramiento para la elección del sistema adecuado, migración de datos y soporte post-instalación, asegurándonos de que cada equipo funcione de manera segura y con el mejor rendimiento.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Assets/img/Software.png" style="max-width: 18rem;" class="card-img-top" alt="Instalación de Sistemas Operativos">
+                    <div class="card-body">
+                        <h5 class="card-title">Instalación de Software de Oficina</h5>
+                        <p class="card-text">Ofrecemos servicios de instalación de software de oficina para asegurar que los clientes cuenten con las herramientas necesarias para trabajar de manera eficiente. Esto incluye la instalación y configuración de paquetes de software como Microsoft Office, Google Workspace, y suites de oficina de código abierto, adaptándolos a las necesidades específicas de cada usuario o empresa. También proporcionamos soporte para optimizar el rendimiento y resolver problemas técnicos, garantizando que el software funcione sin interrupciones y esté siempre actualizado.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Assets/img/reparacion.png" style="max-width: 18rem;" class="card-img-top" alt="Reparación de computadoras">
+                    <div class="card-body">
+                        <h5 class="card-title">Reparación de computadoras</h5>
+                        <p class="card-text">Ofrecemos servicios de reparación de computadoras, atendiendo tanto problemas de hardware como de software para restaurar el rendimiento óptimo de los equipos. Esto incluye desde la sustitución de componentes, limpieza y mantenimiento interno, hasta la solución de problemas en el sistema operativo y el software. Nos aseguramos de diagnosticar a fondo cada equipo y aplicar soluciones duraderas que prolonguen su vida útil, proporcionando además asesoría y recomendaciones para el cuidado y la prevención de futuros problemas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><img src="Assets/img/logo.png" alt="Logotipo" class="logo"> Mercy Developer | Teléfono: +56 9 8843 5438</p>
+    </footer>
+</body>
+</html>
+
